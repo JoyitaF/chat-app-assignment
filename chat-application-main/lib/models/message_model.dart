@@ -29,6 +29,7 @@ class MessageModel {
     name: json["name"],
     time: json["time"],
   );
+  
 
   Map<String, dynamic> toMap() => {
     "message": message,

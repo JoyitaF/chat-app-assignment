@@ -23,5 +23,20 @@ class UserManage{
     // });
   }
 
+Future<List<UserData>> getUsers() async {
+    List<UserData> users = [];
+
+    try {
+      QuerySnapshot querySnapshot =
+          await FirebaseFirestore.instance.collection('users').get();
+      for (var doc in querySnapshot.docs) {
+        Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+        users.add(UserData.fromMap(data));
+      }
+    } catch (e) {}
+
+    return users;
+  }
+
 
 }

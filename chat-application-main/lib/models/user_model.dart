@@ -34,4 +34,6 @@ class UserData {
     "email": email,
     "my_chats": myChats == null ? [] : List<dynamic>.from(myChats!.map((x) => x)),
   };
+
+  
 }

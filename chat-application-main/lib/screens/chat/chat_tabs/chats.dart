@@ -27,7 +27,7 @@ class _ChatsPageState extends State<ChatsPage> {
   @override
   void initState() {
     super.initState();
-    // Call your asynchronous method here, not getUsers()
+    // asynchronous init
     UserManage().getUsers().then((userList) {
       setState(() {
         users = userList;

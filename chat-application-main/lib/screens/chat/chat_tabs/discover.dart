@@ -21,7 +21,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
   @override
   void initState() {
     super.initState();
-    // Call your asynchronous method here, not getUsers()
+    // asynchronous init
     UserManage().getUsers().then((userList) {
       setState(() {
         users = userList;
